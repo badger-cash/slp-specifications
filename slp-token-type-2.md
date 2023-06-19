@@ -1,8 +1,8 @@
 ![Simple Ledger Protocol](images/SLP-logo-solid-200.png)
 
 # SLP Token Type 2 Protocol Specification
-### Specification version: DRAFT
-### Date published: 
+### Specification version: 0.1
+### Date published: June 18, 2023
 
 # Table of Contents
 [SECTION I: BACKGROUND](#section-i-background)<BR>
