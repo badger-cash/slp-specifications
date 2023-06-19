@@ -2,8 +2,8 @@
 
 # Simple Ledger Payment Protocol
 
-#### Version: 0.1
-#### Date published: June 11, 2019
+#### Version: 0.2
+#### Date published: June 18, 2023
 
 ## Purpose
 
@@ -35,6 +35,8 @@ Payments are generated according to the [BIP 70 specification](https://github.co
 
 Payments are considered valid if the submitted transaction has the outputs required by the Payment Request. As with BIP 70, the script and amount for all required outputs, except the output at index 0, must match the details in the Payment Request. The SLP OP_RETURN script (vout=0) does not have to exactly match the script in the Payment Request to be considered valid. However, it must include any requested outputs.
 
+[SLP Token Type 2 specification](https://github.com/badger-cash/slp-specifications/blob/master/slp-token-type-2.md) allows for multi-output MINT transactions. As this allows for a broad variety of MINT transactions that can satisfy a payment request, and because there is no difference in value between a MINT output and a SEND output, MINT transactions that otherwise satisfy the requirements of the Payment Request are considered valid, even if the request is for a SEND transaction.
+
 #### Example OP_RETURN Script Validation
 
 REQUESTED SCRIPT (ASM):</br>
@@ -45,6 +47,14 @@ VALID SCRIPT (ASM) - APPENDED CHANGE OUTPUT:</br>
 
 INVALID SCRIPT (ASM) - MISSING REQUIRED OUTPUT:</br>
 ``OP_RETURN 534c5000 OP_1 53454e44 4de69e374a8ed21cbddd47f2338cc0f479dc58daa2bbe11cd604ca488eca0ddf 000000000000000a 0000000000000014``
+
+---
+
+TOKEN TYPE 2 REQUESTED SCRIPT (ASM):</br>
+``OP_RETURN 534c5000 OP_2 53454e44 4de69e374a8ed21cbddd47f2338cc0f479dc58daa2bbe11cd604ca488eca0ddf 000000000000000a 0000000000000014 000000000000000a``
+
+VALID SCRIPT (ASM) - TOKEN TYPE 2 MINT WITH REQUIRED OUTPUTS:</br>
+``OP_RETURN 534c5000 OP_2 4d494e54 4de69e374a8ed21cbddd47f2338cc0f479dc58daa2bbe11cd604ca488eca0ddf 000000000000000a 0000000000000014 000000000000000a``
 
 ### URI Specification
 
