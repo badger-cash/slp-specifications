@@ -1,8 +1,8 @@
 ![Simple Ledger Protocol](images/SLP-logo-solid-200.png)
 
 # SLP Token Type 2 Protocol Specification
-### Specification version: 0.1
-### Date published: June 18, 2023
+### Specification version: 0.2
+### Date published: July 19, 2023
 
 # Table of Contents
 [SECTION I: BACKGROUND](#section-i-background)<BR>
@@ -215,6 +215,12 @@ The SLP Token Type 2 SEND transaction is exactly the same as the SEND format for
 ### COMMIT - Checksum Commitment Transaction
 
 The SLP Token Type 2 COMMIT transaction is exactly the same as the COMMIT format for Type 1, with the following change.
+
+`token_type`: the value of this field is `2`
+
+### BURN - Token Burn Transaction
+
+The SLP Token Type 2 BURN transaction is exactly the same as the [BURN format for Type 1](https://github.com/badger-cash/slp-self-mint-protocol/blob/master/token-type1-burn.md), with the following change.
 
 `token_type`: the value of this field is `2`
 
