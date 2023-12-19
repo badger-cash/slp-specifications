@@ -108,7 +108,7 @@ The SLP Token Type 2 GENESIS transaction is similar to the GENESIS format for Ty
    <td>
    OP_RETURN<br/>
    &lt;lokad_id: 'SLP\x00'&gt; (4 bytes, ascii)<sup>1</sup><br/>
-   &lt;token_type: 2&gt; (1 to 2 byte integer)<br/>
+   &lt;token_type: 2&gt; (1 byte integer)<br/>
    &lt;transaction_type: 'GENESIS'&gt; (7 bytes, ascii)<br/>
    &lt;token_ticker&gt; (0 to ∞ bytes, suggested utf-8)<br/>
    &lt;token_name&gt; (0 to ∞ bytes, suggested utf-8)<br/>
