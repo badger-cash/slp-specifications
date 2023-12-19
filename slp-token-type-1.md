@@ -289,7 +289,7 @@ The genesis transaction includes an initial minting of `initial_token_mint_quant
    <td>
    OP_RETURN<br/>
    &lt;lokad_id: 'SLP\x00'&gt; (4 bytes, ascii)<sup>1</sup><br/>
-   &lt;token_type: 1&gt; (1 to 2 byte integer)<br/>
+   &lt;token_type: 1&gt; (1 byte integer)<br/>
    &lt;transaction_type: 'GENESIS'&gt; (7 bytes, ascii)<br/>
    &lt;token_ticker&gt; (0 to ∞ bytes, suggested utf-8)<br/>
    &lt;token_name&gt; (0 to ∞ bytes, suggested utf-8)<br/>
@@ -357,7 +357,7 @@ As with GENESIS, the MINT allows to end the baton, or further pass on the baton 
   <td>0</td>
     <td>OP_RETURN<BR>
 &lt;lokad_id: 'SLP\x00'&gt; (4 bytes, ascii)<BR>
-&lt;token_type: 1&gt; (1 to 2 byte integer)<BR>
+&lt;token_type: 1&gt; (1 byte integer)<BR>
 &lt;transaction_type: 'MINT'&gt; (4 bytes, ascii)<BR>
 &lt;token_id&gt; (32 bytes)<BR>
 &lt;mint_baton_vout&gt; (0 bytes or 1 byte between 0x02-0xff)<BR>
@@ -414,7 +414,7 @@ The following transaction format is used to transfer tokens from one or more tok
     <td>0</td>
     <td>OP_RETURN<BR>
 &lt;lokad id: 'SLP\x00'&gt; (4 bytes, ascii)<BR/>
-&lt;token_type: 1&gt; (1 to 2 byte integer)<BR/>
+&lt;token_type: 1&gt; (1 byte integer)<BR/>
 &lt;transaction_type: 'SEND'&gt; (4 bytes, ascii)<BR/>
 &lt;token_id&gt; (32 bytes)<BR/>
 &lt;token_output_quantity1&gt; (<b>required</b>, 8 byte integer)<BR/>
@@ -478,7 +478,7 @@ Initial implementations will focus on supporting the consensus-based forms of va
     <td>
     OP_RETURN<br/>
     &lt;lokad_id: 'SLP\x00'&gt; (4 bytes, ascii)<br/>
-    &lt;token_type: 1&gt; (1 to 2 byte integer)<br/>
+    &lt;token_type: 1&gt; (1 byte integer)<br/>
     &lt;transaction_type: 'COMMIT'&gt; (6 bytes, ascii) <br/>
     &lt;token_id&gt; (32 bytes)<br/>
     &lt;for_bitcoin_block_hash&gt; (32 bytes)<br/>
