@@ -165,7 +165,7 @@ The SLP Token Type 2 MINT transaction is similar to the MINT format for Type 1, 
   <td>0</td>
     <td>OP_RETURN<BR>
 &lt;lokad_id: 'SLP\x00'&gt; (4 bytes, ascii)<BR>
-&lt;token_type: 2&gt; (1 to 2 byte integer)<BR>
+&lt;token_type: 2&gt; (1 byte integer)<BR>
 &lt;transaction_type: 'MINT'&gt; (4 bytes, ascii)<BR>
 &lt;token_id&gt; (32 bytes)<BR>
 &lt;additional_token_quantity1&gt; (<b>required</b>, 8 byte integer)<BR/>
