@@ -1,8 +1,8 @@
 ![Simple Ledger Protocol](images/SLP-logo-solid-200.png)
 
 # SLP Token Type 2 Protocol Specification
-### Specification version: 0.2
-### Date published: July 19, 2023
+### Specification version: 0.3
+### Date published: January 5, 2024
 
 # Table of Contents
 [SECTION I: BACKGROUND](#section-i-background)<BR>
@@ -150,6 +150,7 @@ The SLP Token Type 2 MINT transaction is similar to the MINT format for Type 1, 
 
 `additional_token_quantity` (multiple): these fields replace the `mint_baton_vout` and `additional_token_quantity` fields from Type 1. The implementation of these fields is exactly the same as the `token_output_quantity` fields in the SEND transaction type.
 
+**MINT block validity restriction**: Unlike Token Type 1, MINT UTXOs for Token Type 2 are not batons chained from the GENESIS transaction. Therefore, allowing a MINT transaction in the same block as the GENESIS transaction for a given `token_id` can lead to inconsistencies between different indexer implementations. To mitigate any such risk, in order for a MINT transaction to be considered valid, it must be in a block subsequent to the block containing the GENESIS transaction. Any MINT transaction in the same block as (or in a block preceding) the block containing its associated GENESIS transaction will be considered invalid.
 
 **Transaction inputs**: Any number of inputs or content of inputs, in any order, but with required presence of at least one input originating from the P2SH address identified by the `mint_vault_scripthash` in the GENESIS transaction.
 
@@ -202,6 +203,8 @@ The SLP Token Type 2 MINT transaction is similar to the MINT format for Type 1, 
   </tr>
 
 </table>
+
+**Transaction outputs**:
 
 
 ### SEND - Spend Transaction
