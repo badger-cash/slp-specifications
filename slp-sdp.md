@@ -71,7 +71,7 @@ a=candidate:2 1 UDP 1686109951 171.99.247.125 62849 typ srflx raddr 0.0.0.0 rpor
 
 `01466e4b786e2f4e6a66524e4b506f4d50724d696b4d5a447039389a17de5716b558cae72cbaad433b59a5c25aafcc917a2e9ca43279ff75fbe79101fffe7f6400ab63f77d81f5000000000000`
 
-#### Transaction Format
+### Transaction Format
 
 **Transaction inputs**: Any number of inputs or content of inputs, in any order.
 
