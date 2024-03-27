@@ -88,7 +88,7 @@ a=candidate:2 1 UDP 1686109951 171.99.247.125 62849 typ srflx raddr 0.0.0.0 rpor
 &lt;lokad_id: 'SDP\x00'&gt; (4 bytes, ascii)<BR>
 &lt;version: 1&gt; (1 byte integer)<BR>
 &lt;transaction_type: 0x01&gt; (1 byte, 0x01: offer | 0x02: answer)<BR>
-&lt;encoded minimum SDP&gt; (71 bytes: srflx | 77 bytes: host )<BR>
+&lt;encoded minimum SDP&gt; (71 bytes: host | 77 bytes: srflx)<BR>
   </td>
     <td>any</td>
   </tr>
